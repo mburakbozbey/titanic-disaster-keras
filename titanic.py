@@ -13,8 +13,8 @@ from keras import backend
 import csv
 
 ##Reads the data:
-train=pd.read_csv("C:\\Users\\mbura\\Desktop\\train.csv")
-test=pd.read_csv("C:\\Users\\mbura\\Desktop\\test.csv")
+train=pd.read_csv("path\\to\\train\\data\\train.csv")
+test=pd.read_csv("path\\to\\train\\data\\test.csv")
 
 ## Seed the generator to re-seed the generator:
 np.random.seed(5)
@@ -97,6 +97,6 @@ x_test_id=x_test_id.reset_index()
 x_test_id=x_test_id.iloc[:,1]
 sub = pd.concat([x_test_id,y_pred], axis=1,ignore_index=True)
 sub.columns = ["PassengerId","Survived"]
-sub.to_csv("Path\\to\\csv\\file\\submission.csv", sep=',',index=False)
+sub.to_csv("Path\\to\\csv\\file\\submit.csv", sep=',',index=False)
 
 
